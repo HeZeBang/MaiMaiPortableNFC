@@ -12,7 +12,7 @@ namespace MaiMaiPortableNFC
         }
 
         public const string ALERT_TITLE = "NFC";
-        public const string MIME_TYPE = "application/com.companyname.maimaiportablenfc";
+        public const string MIME_TYPE = "application/com.zambar.mainfc";
         public string ServerIP = "";
         public string ServerPort = "8088";
 

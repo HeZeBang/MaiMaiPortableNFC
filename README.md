@@ -52,7 +52,7 @@ A wireless solution to transfer your custom NFC card to desktop.
 
 Server: Windows 7+ (Python 3.11) (Tested on Windows 10)
 
-Client: Android (Tested on Honor MagicOS 8.0 / Android 14)
+Client: Android 5.0+ (Tested on Honor MagicOS 8.0 / Android 14)
 
 ## Roadmap
 
