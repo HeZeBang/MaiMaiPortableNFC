@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaiMaiPortableNFC.MainPage"
+             x:Name="mainPage"
+             BindingContext="{x:Reference mainPage}">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="10" Margin="50,0">
+            <Label FontSize="Large"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="maimai Protable NFC" />
+
+            <Label FontSize="Subtitle"
+                   Text="Server IP" />
+
+            <Label FontSize="Body"
+                   Text="Please run server on your host, and the possible IP will be printed on the terminal. If you're not sure what IP is available, please ensure that your mobile is connected in the same network (Eg. WiFi) and try them one by one."/>
+
+            <Entry
+                   Placeholder="Enter Server IP"
+                   Text="{Binding ServerIP}"
+                   TextChanged="Entry_TextChanged_IP" />
+
+            <Label FontSize="Subtitle"
+                   Text="Server Port" />
+
+            <Label FontSize="Body"
+                   Text="Default 8088 if you didn't modify const PORT"/>
+
+            <Entry
+                   Placeholder="8088"
+                   Text="{Binding ServerPort}"
+                   TextChanged="Entry_TextChanged_Port"/>
+
+            <Button Clicked="Button_Clicked"
+                    Text="Connect" />
+
+            <Label 
+                   Margin="0,6,0,0"
+                   Padding="12,6"
+                   BackgroundColor="Red"
+                   HorizontalOptions="CenterAndExpand"
+                   IsVisible="{Binding NotConnectedToServer}"
+                   Text="NO CONNECTION TO SERVER"
+                   TextColor="White" />
+
+            <Label FontSize="Subtitle"
+                   Text="NFC Config" />
+
+            <Button Clicked="Button_Clicked_StartListening"
+                    Text="Start Read Tag" />
+
+            <Button Clicked="Button_Clicked_StopListening"
+                    Text="Stop Listener" />
+
+            <Label 
+                   x:Name="ListeningLabel"
+                   Margin="0,6,0,0"
+                   Padding="12,6"
+                   BackgroundColor="Blue"
+                   HorizontalOptions="CenterAndExpand"
+                   IsVisible="{Binding DeviceIsListening}"
+                   Text="Listening for NFC Tag..."
+                   TextColor="White" />
+
+            <Label 
+                   x:Name="EnabledLabel"
+                   Margin="0,6,0,0"
+                   Padding="12,6"
+                   BackgroundColor="Red"
+                   HorizontalOptions="CenterAndExpand"
+                   IsVisible="{Binding NfcIsDisabled}"
+                   Text="NFC IS DISABLED"
+                   TextColor="White" />
+
+            <Label 
+                   x:Name="InfoLabel"
+                   Margin="0,6,0,0"
+                   Padding="12,6"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="Info Label"/>
+
+            <Label
+                   Margin="0,6,0,0"
+                   Padding="12,6"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="Repo: HeZeBang/maimaiPortableNFC, Based on franckbour/Plugin.NFC"/>
+
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
