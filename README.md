@@ -2,7 +2,8 @@
 
 A wireless solution to transfer your custom NFC card to desktop.
 
-> [!warning] This project is still under development
+> [!warning]
+> This project is still under development
 
 ## To be implemented
 
